@@ -28,17 +28,17 @@ namespace Assets.Editor
 
         private static void WriteGeneratedFileData(TextWriter writer, string fileName, string ttFileName)
         {
-            writer.WriteLine($@"<!-- Begin adding T4 for {fileName} -->");
-            writer.WriteLine($@"<None Include=""{ttFileName}"">");
-            writer.WriteLine($@"   <Generator>TextTemplatingFileGenerator</Generator>");
-            writer.WriteLine($@"   <LastGenOutput>{Path.GetFileName(fileName)}</LastGenOutput>");
-            writer.WriteLine($@"</None>");
-            writer.WriteLine($@"<Compile Include=""{fileName}"">");
-            writer.WriteLine($@"   <AutoGen>True</AutoGen>");
-            writer.WriteLine($@"   <DesignTime>True</DesignTime>");
-            writer.WriteLine($@"   <DependentUpon>{Path.GetFileName(ttFileName)}</DependentUpon>");
-            writer.WriteLine($@"</Compile>");
-            writer.WriteLine($@"<!-- End adding T4 for {fileName} -->");
+            writer.WriteLine($@"    <!-- Begin adding T4 for {fileName} -->                             ");
+            writer.WriteLine($@"    <None Include=""{ttFileName}"">                                     ");
+            writer.WriteLine($@"        <Generator>TextTemplatingFileGenerator</Generator>              ");
+            writer.WriteLine($@"        <LastGenOutput>{Path.GetFileName(fileName)}</LastGenOutput>     ");
+            writer.WriteLine($@"    </None>                                                             ");
+            writer.WriteLine($@"    <Compile Include=""{fileName}"">                                    ");
+            writer.WriteLine($@"        <AutoGen>True</AutoGen>                                         ");
+            writer.WriteLine($@"        <DesignTime>True</DesignTime>                                   ");
+            writer.WriteLine($@"        <DependentUpon>{Path.GetFileName(ttFileName)}</DependentUpon>   ");
+            writer.WriteLine($@"    </Compile>                                                          ");
+            writer.WriteLine($@"    <!-- End adding T4 for {fileName} -->                               ");
         }
 
         /// <summary>Method automatically called upon CS project generation</summary>
