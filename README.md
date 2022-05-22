@@ -12,6 +12,10 @@ Can also be triggered manually through the Assets context menu.
 
 ![Assets context menu](doc/contextmenu.png)
 
+## Solution
+- For editor assembly support: replace the string "Assembly-CSharp.csproj" with "Assembly-CSharp*.csproj".
+- For runtime text templates: modify the content of the string from TextTemplatingFileGenerator to TextTemplatingFilePreprocessor.
+
 ## Authors
 
 * Niek Jannink - [njannink](https://github.com/njannink)
